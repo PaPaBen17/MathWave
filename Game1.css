@@ -1,0 +1,301 @@
+body {
+  margin: 0;
+  background-image: URL("Game1-background.jpg");
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+}
+
+.container img {
+  position: absolute;
+  left: 80px;
+  top: 13px;
+}
+
+.math-wave {
+  width: 150px;
+  height: 25px;
+  left: 160px;
+  top: 30px;
+  color: yellow;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 53px;
+  margin-left: 1100px;
+  margin-top: 32px;
+  right: 200px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: yellow;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+}
+#Disclaimer {
+  font-size: 1.5em;
+  color: white;
+}
+
+#recorded {
+  color: yellow;
+}
+
+.main-container {
+  background-color: #25063e;
+  width: 90%;
+  max-width: 31.25em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 5em 3em;
+  border-radius: 0.5em;
+}
+
+.main-container .heading {
+  font-size: 2em;
+  color: yellow;
+  text-align: center;
+  font-weight: 100;
+  line-height: 1.8em;
+  margin-top: -20px;
+  letter-spacing: 3px;
+}
+
+#question-container {
+  background-image: url("steptodown.com881888.jpg");
+  background-size: cover;
+  font-size: 2em;
+  border-radius: 16px;
+  font-weight: 600;
+  color: #23234c;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: ;
+  padding: 50px;
+}
+input {
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  width: 470px;
+  height: 45px;
+  padding: 12px;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 20px -18px;
+}
+
+button {
+  margin-left: 5px;
+  width: 490px;
+  padding: 10px;
+  margin-top: 10px;
+  color: #feeeab;
+  text-decoration: none;
+  border: none;
+  background-color: #f48c06;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  border-radius: 16px;
+}
+#question {
+  padding: 20px;
+  font-size: 2em;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#answer {
+  margin-top: 10px;
+}
+#result {
+  margin-top: 10px;
+}
+#timer-box,
+#score-box {
+  color: white;
+}
+.footer {
+  background-color: #1c0323; /* Change the background color as needed */
+  color: #fff; /* Change the text color as needed */
+  padding: 15px 0; /* Adjust padding as needed */
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Adjustments for screens smaller than or equal to 600px width */
+  body {
+    margin: 0;
+    background-image: url("phonebggame.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .math-wave,
+  .container img {
+    display: none;
+  }
+
+  .nav-links {
+    padding: 10px;
+    display: flex;
+    flow-direction: row;
+    gap: 30px;
+    background-color: #1c0323;
+    border-radius: 12px;
+    margin-left: 0;
+    margin: 20px;
+  }
+
+  .nav-links li {
+    display: inline;
+  }
+
+  .nav-links a {
+    color: yellow;
+    font-size: 1em;
+    font-weight: 100;
+  }
+  .container img {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .radio-inputs {
+    background-color: #1c0323;
+    padding: 5px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 360px;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+    left: 0;
+  }
+
+  .radio-inputs .radio .name {
+    padding: 15px;
+    font-size: 15px;
+    margin-bottom: -10px;
+    height: 40px;
+    color: yellow;
+    letter-spacing: 1.5px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .main-container {
+    top: 330px;
+    width: 230px;
+    height: 250px;
+    background-color: pink;
+    border: 3px solid pink;
+  }
+  .main-container .heading {
+    margin-top: -50px;
+    font-size: 20px;
+  }
+  #question {
+    font-size: 40px;
+    color: white;
+  }
+
+  #question-container {
+    background-image: url("game-1.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    padding: 40px;
+    height: 30px;
+    border-radius: 16px;
+  }
+  input[type="number"] {
+    font-size: 30px;
+    max-width: 200px;
+    height: 40px;
+    margin-bottom: 15px;
+    border: 4px solid purple;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  #start-btn {
+    font-size: 14px;
+    padding: 10px;
+    background-color: ;
+    width: 230px;
+    border-radius: 16px;
+    color: #1c0323;
+  }
+  #submit-btn button {
+    display: none;
+  }
+
+  #submit-btn {
+    display: none;
+  }
+  #result,
+  #timer,
+  #score {
+    font-size: 16px;
+    color: white;
+  }
+
+  .footer {
+    background-color: #1c0323; /* Change the background color as needed */
+    color: #fff; /* Change the text color as needed */
+    padding: 15px 0; /* Adjust padding as needed */
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}

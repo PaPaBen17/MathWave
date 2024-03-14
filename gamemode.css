@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+  background-image: URL("gamemode-bg.jpg");
+  font-family: "Poppins", sans-serif;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container img {
+  position: absolute;
+  left: 80px;
+  top: 13px;
+}
+
+.math-wave {
+  width: 150px;
+  height: 25px;
+  left: 160px;
+  top: 30px;
+  color: yellow;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 53px;
+  margin-left: 1350px;
+  margin-top: 32px;
+  right: 200px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: yellow;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.gamemodes {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 2.5em;
+  color: #fee440;
+  text-shadow: 2px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.option .container {
+  display: flex; /* Use flexbox to arrange elements inline */
+  justify-content: center;
+  margin-top: 130px;
+  gap: 70px;
+}
+
+.box {
+  margin-top: -100px;
+  width: 500px;
+  height: 485px;
+  margin-right: 10px; /* Add some spacing between containers */
+  border: 1px solid #ccc; /* Add border for better visualization */
+  border-radius: 20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  margin-top: 40px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.des {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  font-size: 25px;
+  color: white;
+  margin: 15px 70px 0 70px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.button {
+  margin-top: 20px;
+  color: #ecf0f1;
+  font-size: 3em;
+  background-color: #ff008a;
+  border: 1px solid #ff008a;
+  border-radius: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 10px;
+  width: 400px;
+  box-shadow: 0px 20px 0px #c7208c;
+  transition: all 0.2s;
+}
+
+.button:active {
+  color: #fe9cb7;
+  background-color: #75004c;
+  box-shadow: 0px 5px 0px #c7208c;
+  position: relative;
+  border: 1px solid #75004c;
+  top: 2px;
+}
+
+.footer {
+  background-color: #1c0323; /* Change the background color as needed */
+  color: #fff; /* Change the text color as needed */
+  padding: 15px 0; /* Adjust padding as needed */
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer .container strong {
+  color: yellow;
+}
+
+/* Media query for phone-size screens */
+
+@media only screen and (max-width: 600px) {
+  .math-wave {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .container img {
+    display: none; /* Hide the image on smaller screens */
+  }
+
+  .gamemodes {
+    font-size: 30px;
+    margin-top: 10px;
+    letter-spacing: 5px;
+  }
+
+  .option .container {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+  }
+
+  .box {
+    width: 90%; /* Adjust the width for smaller screens */
+    height: 230px; /* Adjust the height for smaller screens */
+    border-radius: 10px; /* Adjust the border radius for smaller screens */
+    margin: -100px 20px 0 20px; /* Adjust the margin for smaller screens */
+  }
+
+  .options {
+    font-size: 30px; /* Adjust the font size for smaller screens */
+    margin-top: 15px; /* Adjust the margin top for smaller screens */
+  }
+
+  .des {
+    font-size: 15px; /* Adjust the font size for smaller screens */
+    margin: 15px 30px -20px 30px; /* Adjust the margin for smaller screens */
+  }
+
+  .button {
+    margin-top: 10px;
+    color: #ecf0f1;
+    font-size: 2em;
+    background-color: #ff008a;
+    border: 1px solid #ff008a;
+    border-radius: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1px;
+    width: 250px;
+    box-shadow: 0px 10px 0px #c7208c;
+    transition: all 0.2s;
+  }
+
+  .button:active {
+    color: #fe9cb7;
+    background-color: #75004c;
+    box-shadow: 0px 3px 0px #c7208c;
+    position: relative;
+    border: 1px solid #75004c;
+  }
+
+  .footer {
+    background-color: #1c0323; /* Change the background color as needed */
+    color: #fff; /* Change the text color as needed */
+    padding: 15px 0; /* Adjust padding as needed */
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  strong {
+    color: yellow;
+  }
+}

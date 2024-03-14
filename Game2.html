@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MathWave</title>
+    <link rel="shortcut icon" href="Math.png" type="x-icon" />
+    <link rel="stylesheet" href="Game2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="Bar">
+      <header>
+        <nav>
+          <div class="math-wave" style="position: absolute">Math Wave</div>
+          <div class="container">
+            <img src="Math.png" alt="Your Logo" width="70" />
+            <div id="app"></div>
+          </div>
+          <ul class="nav-links">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="gamemode.html">Game Option</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </nav>
+      </header>
+    </section>
+    <div class="game-container">
+      <!-- Header -->
+      <div class="header">
+        <h1>MATH SPRINT GAME</h1>
+      </div>
+
+      <!-- splash Page -->
+      <div class="card" id="splash-page">
+        <form id="start-form">
+          <div class="selection-container">
+            <!-- 10 Questions radio Input -->
+            <div class="radio-container">
+              <label for="value-10">10 Questions</label>
+              <input type="radio" name="questions" value="10" id="value-10" />
+              <span class="best-score">
+                <span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
+
+            <!-- 25 Questions radio Input -->
+            <div class="radio-container">
+              <label for="value-25">25 Questions</label>
+              <input type="radio" name="questions" value="25" id="value-25" />
+              <span class="best-score">
+                <span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
+
+            <!-- 50 Questions radio Input -->
+            <div class="radio-container">
+              <label for="value-50">50 Questions</label>
+              <input type="radio" name="questions" value="50" id="value-50" />
+              <span class="best-score">
+                <span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
+
+            <!-- 99 Questions radio Input -->
+            <div class="radio-container">
+              <label for="value-99">99 Questions</label>
+              <input type="radio" name="questions" value="99" id="value-99" />
+              <span class="best-score">
+                <span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
+          </div>
+          <!-- Start Form -->
+          <div class="selection-footer">
+            <button class="start" type="submit" id="start-btn">
+              START ROUND
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Countdown Page-->
+
+      <div class="card" id="countdown-page" hidden>
+        <h1 class="countdown"></h1>
+      </div>
+
+      <!-- Game Page -->
+
+      <div class="card" id="game-page" hidden>
+        <!-- Item Container -->
+        <div class="item-container"></div>
+        <!-- Right/Wrong Buttons -->
+        <div class="item-footer">
+          <button class="wrong" onclick="select(false)">WRONG</button>
+          <button class="right" onclick="select(true)">RIGHT</button>
+        </div>
+      </div>
+
+      <!-- Score Page -->
+      <div class="card" id="score-page" hidden>
+        <!-- Score Container -->
+        <div class="score-container">
+          <h1 class="title">Your Time</h1>
+          <h1 class="final-time"></h1>
+          <h1 class="base-time"></h1>
+          <h1 class="penalty-time"></h1>
+        </div>
+        <!-- Play Again Button -->
+        <div class="score-footer">
+          <button class="play-again" onclick="playAgain()" hidden>
+            Play Again
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; NOTE: Don't forget to take screenshot of the
+          <strong>RESULT</strong>.
+        </p>
+      </div>
+    </footer>
+    <!-- Script -->
+    <script src="shuffle.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

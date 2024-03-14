@@ -1,0 +1,553 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --success: rgb(15, 158, 2);
+  --danger: rgb(214, 23, 23);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: #e8e8e8;
+  margin-top: 2%;
+  background-image: url("game2-background.jpg");
+}
+
+.container img {
+  position: absolute;
+  left: 75px;
+  top: 13px;
+}
+
+.Bar .math-wave{
+  width: 150px;
+  height: 25px;
+  left: 160px;
+  top: 30px;
+  color: yellow;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-links{
+  display: flex;
+  list-style: none;
+  margin-left: 700px;
+  gap: 53px;
+  margin-top: -6px;
+
+}
+
+.nav-links a{
+  color: yellow;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.game-container {
+  border: 10px solid #8e137b;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+  width: 530px;
+  height: 750px;
+  position: relative;
+  background: #1c0323;
+  border-radius: 26px;
+  user-select: none;
+  margin-top: 70px;
+  margin-left: -1100px;
+}
+
+.header {
+  background: #c7208c;
+  color: white;
+  border-radius: 16px 16px 0 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin: 5px auto 10px;
+  height: 600px;
+}
+
+/* Splash Page -------------------- */
+input[type="radio"] {
+  opacity: 0;
+  width: 100%;
+  height: 75px;
+  position: relative;
+  top: -50px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.selection-container {
+  position: relative;
+  top: 65px;
+}
+
+.radio-container {
+  width: 90%;
+  height: 75px;
+  margin: 25px;
+  cursor: pointer;
+  border: 4px solid #fe9cb7;
+  border-radius: 16px;
+  background: #8e137b;
+  transition: ease-out 0.4s;
+  color: white;
+}
+
+.radio-container:hover{
+  border: 4px solid yellow;
+  color: black;
+  box-shadow: inset 0 -100px 0 0 yellow;
+}
+
+label {
+  position: relative;
+  top: 15px;
+  left: 20px;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+}
+
+.selected-label {
+  background: yellow;
+  color: black;
+  border: yellow;
+}
+.selected-label:active{
+  transform: scale(0.9);
+}
+
+.best-score {
+  position: relative;
+  top: -125px;
+  left: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  max-width: fit-content;
+}
+
+.best-score span {
+  margin: 0;
+}
+
+.best-score span:last-child {
+  font-size: 24px;
+}
+
+.selection-footer {
+  top: 115px;
+  border-radius: 0 0 16px 16px;
+  color: black;
+}
+
+#start-btn:hover{
+  color: #FF5349;
+  font-weight: 600;
+}
+/* Game Page -------------------------- */
+.height-240 {
+  height: 165px;
+  width: 100%;
+}
+
+.height-500 {
+  height: 500px;
+  width: 100%;
+}
+
+.item-container {
+  height: 552px;
+  overflow-y: scroll;
+  position: relative;
+  -ms-overflow-style: none;
+}
+
+.item-container::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  height: 80px;
+  margin: 0 50px;
+  user-select: none;
+  z-inddex: 2;
+  color: yellow;
+}
+
+.finished > h1 {
+  opacity: 0.5;
+}
+
+.selected-item {
+  background: rgba(255, 255, 255, 0.3);
+  position: fixed;
+  top: 390px;
+  z-index: 1;
+  width: 510px;
+  height: 80px;
+}
+
+.item-footer,
+.selection-footer {
+  width: 100%;
+  height: 90px;
+  background: #c7208c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0 0 14px 14px;
+}
+
+.item-footer {
+  top: -15px;
+}
+
+button {
+  cursor: pointer;
+  height: 50px;
+  border-radius: 16px;
+  font-size: 25px;
+  font-family: 'Play', sans-serif;
+  color: black;
+  border: 0;
+}
+
+button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(50, 100%, 50%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(255, 255, 0) 0px 7px 29px 0px; 
+}
+
+button:active {
+  letter-spacing: 10px;
+  background-color: hsl(50, 100%, 50%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(255, 255, 0) 0px 0px 0px 0px; 
+  transform: translateX(10px);
+  transition: 1s;
+}
+
+.wrong,
+.right {
+  width: 40%;
+}
+
+.wrong {
+  background: var(--danger);
+  margin-right: 25px;
+}
+
+.right {
+  background: var(--success);
+}
+
+.start,
+.play-again {
+  width: 90%;
+  background: yellow;
+}
+
+/* Countdown Page ---------------------- */
+.countdown {
+  margin-top: 45%;
+  font-size: 100px;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  color: yellow;
+}
+
+/* Score Page ------------------------- */
+.score-container {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-footer {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -50px;
+}
+
+.title {
+  font-size: 45px;
+  color: white;
+}
+
+.final-time {
+  font-size: 100px;
+  margin: 0;
+  color: var(--success);
+}
+
+.base-time {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: white;
+}
+
+.penalty-time {
+  color: var(--danger);
+}
+
+.footer {
+  background-color: #333; /* Change the background color as needed */
+  color: #fff; /* Change the text color as needed */
+  padding: 20px 0; /* Adjust padding as needed */
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.container {
+  max-width: 960px; /* Adjust max-width as needed */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+.footer {
+  background-color: #1C0323; /* Change the background color as needed */
+  color: #fff; /* Change the text color as needed */
+  padding: 15px 0; /* Adjust padding as needed */
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.container {
+  max-width: 960px; 
+  margin: 0 auto; 
+}
+
+.footer .container strong{
+  color: yellow;
+}
+
+
+/* Media Query: Laptop */
+@media screen and (max-width: 1800px) {
+  .game-container {
+    margin-top: 100px;
+  }
+
+  .selected-item {
+    top: 400px;
+  }
+}
+
+
+/* Media Query: iPhone */
+@media screen and (max-width: 376px) {
+
+.math-wave{
+  display: none;
+}
+
+.nav-links{
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  background-color:  #1C0323;
+  border-radius: 12px;
+}
+
+.nav-links li{
+  display: inline;
+}
+
+.nav-links a{
+  color: yellow;
+}
+.container img{
+  display: none;
+}
+
+  a {
+    text-decoration: none;
+    padding: 5px;
+  }
+
+
+  .game-container{
+    top: -5px;
+    border: 5px solid #8e137b;
+    position: absolute;
+    width: 300px;
+    height: 475px;
+  }
+  
+  .header{
+    font-size: 10px;
+    height: 55px;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .selection-container{
+    top: 5px;
+    position: relative;
+    right: 10px;
+  }
+  label{
+    font-size: 20px;
+  }
+  .radio-container{
+    height: 55px;
+    margin-right: 20px;
+  }
+
+  .item-footer,
+   .selection-footer{
+    top: 5px;
+    height: 60px;
+    border-radius: 0 0 20px 20px;
+  }
+  .best-score {
+    top: -114px;
+    left: 190px;
+    font-size: 10px;
+  }
+
+  button {
+    font-size: 10px;
+    height: 40px;
+  }
+
+  button:hover{
+    letter-spacing; 2px;
+  }
+
+  /* Game Page -------------------------- */
+  .height-240{
+    height: 20px;
+    width: 100px;
+
+  }
+
+    .height-500 {
+      height: 500px;
+      width: 100%;
+    }
+
+    .item-container {
+      height: 552px;
+      overflow-y: scroll;
+      position: relative;
+      -ms-overflow-style: none;
+    }
+
+    .item-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .finished > h1 {
+      opacity: 0.5;
+    }
+
+    .item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      height: 80px;
+      margin: 0 50px;
+      user-select: none;
+      z-inddex: 2;
+      color: yellow;
+      font-size: 15px;
+    }
+
+    .selected-item{
+      top: 200px;
+      position: fixed;
+      z-index: 1;
+      width: 290px;
+      
+    }
+
+    .item-footer{
+      top: -207px;
+    }
+
+    .score-footer {
+      width: 100%;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: -50px;
+    }
+    
+    .title {
+      font-size: 30px;
+      color: white;
+      margin-top: -200px;
+    }
+    
+    .final-time {
+      font-size: 70px;
+      margin: 0;
+      color: var(--success);
+    }
+    
+    .base-time {
+      margin-top: 10px;
+      margin-bottom: 0;
+      color: white;
+    }
+    
+    .penalty-time {
+      color: var(--danger);
+    }
+    
+    .footer {
+      background-color: #1C0323; /* Change the background color as needed */
+      color: #fff; /* Change the text color as needed */
+      padding: 10px 0; /* Adjust padding as needed */
+      text-align: center;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+    }
+
+    strong{
+      color: yellow;
+    }
+    
+    .container {
+      max-width: 960px; 
+      margin: 0 auto; 
+    }
+
+}

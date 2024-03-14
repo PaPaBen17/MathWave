@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Game1.css">
+    <title>Arithmetic Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Math.png" type="x-icon" />
+</head>
+
+<body>
+    <section class="Bar">
+        <header>
+            <nav>
+                <div class="math-wave" style="position: absolute;">Math Wave</div>
+                <div class="container">
+                    <img src="Math.png" alt="Your Logo" width="70">
+                    <div id="app"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="gamemode.html">Game Option</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <section class="main-container">
+        <h3 class="heading">Arithmetic Game</h3>
+        <h1 id="Disclaimer">Disclaimer: Only this Gamemode will be <strong id="recorded">RECORDED</strong></h1>
+        <div class="question" id="question-container">
+            <div id="question"> </div>
+        </div>
+        <div class="input-answer">
+            <input type="number" id="answer" autocomplete="off">
+            <button id="start-btn" onclick="startGame()">Start Game</button>
+            <div>
+                <div id="result"></div>
+            </div>
+            <div id="timer-box">
+                <div id="timer"></div>
+            </div>
+            <div id="score-box">
+                <div id="score"></div>
+            </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; NOTE: Don't forget to take screenshot of the <strong>RESULT</strong>.</p>
+        </div>
+    </footer>
+    <script src="Game1.js"></script>
+</body>
+
+</html>

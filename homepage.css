@@ -1,0 +1,218 @@
+/* Common styles */
+
+body {
+  margin: 0;
+  background-image: URL("homepage-bg.jpg");
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -5;
+  filter: brightness(70%);
+}
+
+.container img {
+  position: absolute;
+  left: 80px;
+  top: 13px;
+}
+
+.math-wave {
+  width: 150px;
+  height: 25px;
+  left: 160px;
+  top: 30px;
+  color: yellow;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 53px;
+  margin-left: 1350px;
+  margin-top: 32px;
+  right: 200px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: yellow;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#welcome-title{
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  font-size: 4em;
+  color: yellow;
+}
+#box {
+  display: flex;
+  justify-content: center;
+}
+#start-box {
+  padding: 60px;
+  width: 300px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+#title{
+  color: white;
+  font-size: 60px;
+}
+
+#paragraph{
+  color: white;
+  font-size: 25px;
+}
+
+.btn-box-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.btn-box-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 65px;
+}
+
+.button {
+  color: #ecf0f1;
+  font-size: 3em;
+  background-color: #ff008a;
+  border: 1px solid #ff008a;
+  border-radius: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 10px;
+  width: 300px;
+  box-shadow: 0px 20px 0px #c7208c;
+  transition: all 0.2s;
+}
+
+.button:active {
+  color: #fe9cb7;
+  background-color: #75004c;
+  box-shadow: 0px 5px 0px #c7208c;
+  position: relative;
+  border: 1px solid #75004c;
+  top: 2px;
+}
+
+.footer {
+  background-color: #1c0323; /* Change the background color as needed */
+  color: #fff; /* Change the text color as needed */
+  padding: 15px 0; /* Adjust padding as needed */
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Media query for phones */
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: URL("homepage.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: ;
+  }
+
+  .math-wave {
+    left: 60px;
+    font-size: 3em;
+    width: 300px;
+  }
+
+  .container img {
+    display: none; /* Hide the image on smaller screens */
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .rectangle {
+    width: 90%; /* Adjust the width for smaller screens */
+    height: 410px; /* Adjust the height for smaller screens */
+    left: 5%; /* Adjust the left position for smaller screens */
+    top: 130px; /* Keep the top position */
+  }
+
+  .homepage-heading {
+    font-size: 30px; /* Adjust the font size for smaller screens */
+    margin: 50px 20px 0 20px; /* Adjust the margin for smaller screens */
+  }
+
+  .paragraph {
+    font-size: 1em; /* Adjust the font size for smaller screens */
+    margin: 40px 30px 0 30px; /* Adjust the margin for smaller screens */
+  }
+
+  .btn-box {
+    margin-top: -10opx; /* Adjust the margin for smaller screens */
+  }
+
+  .button {
+    font-size: 2em; /* Adjust the font size for smaller screens */
+    width: 250px;
+    padding: 10px; /* Adjust the width for smaller screens */
+    box-shadow: 0px 10px 0px #c7208c;
+  }
+
+  button:hover {
+    letter-spacing: 2px;
+  }
+
+  .footer {
+    background-color: #1c0323; /* Change the background color as needed */
+    color: #fff; /* Change the text color as needed */
+    padding: 15px 0; /* Adjust padding as needed */
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
